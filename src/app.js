@@ -9,7 +9,6 @@ import healthCheckRouter from "./routes/healthcheck.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 
 
-
 app.use("/api/v1/", healthCheckRouter)
 app.use("/api/v1/", authRoutes)
 
