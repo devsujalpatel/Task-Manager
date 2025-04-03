@@ -95,8 +95,8 @@ userSchema.methods.generateTemproryToken = async function () {
 		.createHash("sha256")
 		.update(unHashedToken)
 		.digest("hex");
-    const tokenExpiry = Date.now() + (20*60*1000);
-    return {unHashedToken, hashedToken, tokenExpiry}
+	const tokenExpiry = Date.now() + (20 * 60 * 1000);
+	return { unHashedToken, hashedToken, tokenExpiry };
 };
 
 export const User = mongoose.model("User", userSchema);
